@@ -12,7 +12,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: cd server
 
       - uses: actions/checkout@v4
 
@@ -21,6 +20,7 @@ jobs:
           node-version: 20
           cache: npm
 
+      - run: cd server
       - run: npm ci
       - run: npm test --if-present
 
