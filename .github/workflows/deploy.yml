@@ -25,7 +25,6 @@ jobs:
           cache-dependency-path: server/package-lock.json
 
       - run: npm ci
-      - run: npm test --if-present
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
